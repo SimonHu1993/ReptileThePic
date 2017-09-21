@@ -34,7 +34,7 @@ public class PicServer {
 	//客户端往服务端发送消息
 	@OnMessage
 	public void onMessage(String message,Session session){
-		System.err.println("這是客戶端第"+message+"次請求");
+		System.err.println("這是客戶端"+message+"請求");
 		PicUtil.getPic(message,session.getId(),"D:\\OfficeAPP\\apache-tomcat-7.0.56-windows-i64\\apache-tomcat-7.0.56\\webapps\\TestAndStudy\\imgs");
 		/*for(String key:webSocket.keySet()){
 			try {
@@ -47,7 +47,7 @@ public class PicServer {
 	}
 	
 	public synchronized void sendMessage(String message) throws IOException{
-		System.err.println("這是服務器第"+message+"次請求");
+		System.err.println("這是服務器"+message+"請求");
 	 this.session.getBasicRemote().sendText(message);
 	}
 
