@@ -65,7 +65,7 @@ class DownImg extends Thread {
 		this.socketId = socketId;
 	}
  
-	public void run() {
+	public  void run() {
 		try {
 			Response response = Jsoup.connect(url).ignoreContentType(true)
 					.execute();
